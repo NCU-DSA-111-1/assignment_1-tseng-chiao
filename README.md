@@ -8,7 +8,9 @@ This is assignment 1
 * sh is for ubuntu command line (Bash)
 ```sh
 # Compile
-gcc -o nncc nncc.c fun.c -lm
+gcc -c src/main.c -o build/main.o
+gcc -c src/func.c -o build/func.o
+gcc build/main.o build/func.o -o bin/nncc -lm
 # Run
-./nncc
+./bin/nncc
 ```
